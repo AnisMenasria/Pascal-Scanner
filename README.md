@@ -5,7 +5,7 @@ It recognizes identifiers, numeric literals, keywords, and operators through a s
 
 Usage:
 - Create a new `Scanner` instance with the input string.
-- Call `Scan()` repeatedly to retrieve the next token on each call.
+- Call `Scan()` repeatedly to retrieve the *next* token on each call.
 - When an invalid sequence is encountered, the scanner returns an error token.
 - Reaching the end of the input does not produce a special token, `Scan()` simply returns `null` once no characters remain.
 
