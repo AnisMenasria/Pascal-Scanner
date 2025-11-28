@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             if (char.IsLetter(text[i])) { i++; state1(); }
             else if (char.IsDigit(text[i])) { i++; state2(); }
             else if ("+-*/".Contains(text[i])) { i++; state3(); }
-            else if (",;.\"".Contains(text[i])) { i++; state4(); }
+            else if (",;.\"()".Contains(text[i])) { i++; state4(); }
             else if (text[i] == ':') { i++; state5(); }
             else if (text[i] == '=') { i++; state6(); }
             else if (text[i] == '<') { i++; state8(); }
@@ -238,7 +238,7 @@ namespace WindowsFormsApp1
                 case 3: tokenType = "Operator"; break;
                 case 4: tokenType = "Separator"; break;
                 case 5: tokenType = "Colon"; break;
-                case 6: tokenType = "Equal"; break;
+                case 6: tokenType = "Operator"; break;
                 case 7: tokenType = "Operator"; break;
                 case 8: tokenType = "Operator"; break;
                 default: tokenType = "Unknown"; break;
@@ -266,3 +266,4 @@ namespace WindowsFormsApp1
     }
 
 }
+
